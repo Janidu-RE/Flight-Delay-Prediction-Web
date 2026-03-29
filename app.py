@@ -12,7 +12,7 @@ st.set_page_config(
 # ── Load Dropdown Options from Dataset ───────────────────────────────────────
 @st.cache_data
 def load_options():
-    df = pd.read_csv("airline_delay (1).csv")
+    df = pd.read_csv("airline_delay.csv")
     carriers = sorted(df["carrier"].dropna().unique().tolist())
     airports = sorted(df["airport"].dropna().unique().tolist())
     return carriers, airports
